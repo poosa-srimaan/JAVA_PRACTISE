@@ -48,12 +48,13 @@ public class CreateAccount {
             System.out.print("Deposite amount to create ACCOUNT minimum(1000) : ");
             int balance = sc.nextInt();
             sc.nextLine();
+            String active = "yes";
             if(balance<2000){
                 System.out.println("please enter minimum amount ");
                 writer.close();
                 return;
             }
-            fulldetail = accnum+","+name+","+pin+","+balance+"\n";
+            fulldetail = accnum+","+name+","+pin+","+balance+","+active+"\n";
             // here i use append method to write the details at bottom
             writer.append(fulldetail);
             writer.close();
