@@ -91,6 +91,13 @@ public class AccessAccount {
         System.out.print("Enter pin : ");
         String pin =sc.nextLine();
         for(int i=1;i<data.length;i++){
+            if(data[i][4].equals("yes")){
+                System.out.println("ACCOUNT  FOUND ");
+            }
+            else{
+                System.out.println("your account is deactivated ");
+                return;
+            }
             if(data[i][0].equals(accnum) && data[i][2].equals(pin)){
                 System.out.print("Enter amount to DEBIT : ");
                 int amt = sc.nextInt();
@@ -124,6 +131,13 @@ public class AccessAccount {
         System.out.print("Enter pin : ");
         String pin =sc.nextLine();
         for(int i=1;i<data.length;i++){
+            if(data[i][4].equals("yes")){
+                System.out.println("ACCOUNT  FOUND ");
+            }
+            else{
+                System.out.println("your account is deactivated ");
+                return;
+            }
             if(data[i][0].equals(accnum) && data[i][2].equals(pin)){
                 System.out.print("Enter amount to CREDIT : ");
                 int amt = sc.nextInt();
