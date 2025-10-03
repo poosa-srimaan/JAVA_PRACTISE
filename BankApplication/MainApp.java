@@ -5,8 +5,11 @@ import java.io.File;
 
 
 public class MainApp {
+
+
     public static void main(String[] args) {
         CreateAccount c = new CreateAccount();
+        AccountManage am = new AccountManage();
         Scanner sc = new Scanner(System.in);
         AccessAccount a = new AccessAccount();
         String filename = "userdetails.csv";
@@ -16,7 +19,7 @@ public class MainApp {
         try{
             FileWriter writer = new FileWriter(file,true);
             if(file.length()==0){
-                writer.append("accountno,name,pin,balance\n");
+                writer.append("accountno,name,pin,balance,active\n");
             }
             writer.close();
         }catch(IOException e){
@@ -29,7 +32,8 @@ public class MainApp {
             System.out.println("\n------------- WELCOME TO BANK HOME SECTION ------------\n");
             System.out.println("Enter (1) to create Account");
             System.out.println("Enter (2) if you have Account");
-            System.out.println("Enter (3) to Exit");
+            System.out.println("Enter (3) for Account manage section ");
+            System.out.println("Enter (4) to Exit");
             System.out.print("Enter your option : ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -43,6 +47,10 @@ public class MainApp {
                     break;
                 
                 case 3:
+                    am.accountmanage(file, sc);
+                    break;
+
+                case 4:
                     System.out.println("EXTING .....");
                     sc.close();;
                     return;
