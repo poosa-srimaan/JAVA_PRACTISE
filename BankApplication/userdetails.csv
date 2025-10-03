@@ -1,4 +1,4 @@
-accountno,name,pin,balance
-1101,srimaan,2006,2000
-1102,chinnu,2007,5000
-1103,sahasra,2009,54000
+accountno,name,pin,balance,active
+1101,srimaan,2006,10000,yes
+1102,chinnu,2007,20000,yes
+1103,shasra,2004,10000,yes
